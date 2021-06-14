@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin("*")
 @SpringBootApplication
 public class myfirstwebApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(myfirstwebApplication.class, args);
 	}

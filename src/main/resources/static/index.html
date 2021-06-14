@@ -1,138 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+<head>
+	<title>Login V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+					<div class="wrap-input100 validate-input" data-validate = "Enter the email">
+						<input class="input100" type="text" name="email" placeholder="Email" id="email">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass" placeholder="Password" id="password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
 
-    <title>Sign Up</title>
-  </head>
-  <body onload='document.form1.email.focus()'>
-  
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
 
-  
-  <div class="content">
-    <div class="container">
-      <div class="row justify-content-center">
-        <!-- <div class="col-md-6 order-md-2">
-          <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
-        </div> -->
-        <div class="col-md-6 contents">
-          <div class="row justify-content-center">
-            <div class="col-md-12">
-              <div class="form-block">
-                  <div class="mb-4">
-                  <h3>Sign Up</h3>
-                </div>
-                <form name="form1" action="#" method="post">
-                  <div class="form-group first">
-                    <label for="email">Email</label>
-                    <input type='email' name='email' class="form-control" id="email">
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" onclick="login();">
+							Login
+						</button>
+					</div>
 
-                  </div>
-                  <div class="form-group last mb-4">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password">
-                    
-                  </div>
-                  
-                  <div class="d-flex mb-5 align-items-center">
-                    <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                      <input type="checkbox" checked="checked"/>
-                      <div class="control__indicator"></div>
-                    </label>
-                    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
-                  </div>
+					<div class="text-center p-t-90">
+						<a class="txt1" href="#">
+							Forgot Password?
+						</a>
+					</div>
+					<div class="text-center p-t-90">
+						<a class="txt1" href="SignUp.html">
+							don't have an account? click here to create new account
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
 
-                  <input type="submit" value="Log In" onclick="ValidateEmail(document.form1.email)" class="btn btn-pill text-white btn-block btn-primary">
-
-                  <span class="d-block text-center my-4 text-muted"> or sign in with</span>
-                  <a href="SignUp.html">already have an account?</a>
-                  
-                  <div class="social-login text-center">
-                    <a href="#" class="facebook">
-                      <span class="icon-facebook mr-3"></span> 
-                    </a>
-                    <a href="#" class="twitter">
-                      <span class="icon-twitter mr-3"></span> 
-                    </a>
-                    <a href="#" class="google">
-                      <span class="icon-google mr-3"></span> 
-                    </a>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-  
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-    function ValidateEmail(inputText)
-    {
-    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(inputText.value.match(mailformat))
-    {
-    	var model = {
-    			"email" : this.$("#email").val(),
-    			"password" : this.$("#password").val()
-    			};
-    			console.log("post data:"+model);
-    				$.ajax(
-    				{
-    					type:"POST",
-    					url : "admin/addUser",//api
-    					
-    					ContentType:"application/json ;charset=UTF-8",
-    					
-    					crossOrigin:true,
-    					dataType:"json",
-    					headers: {
-    						'Accept': 'application/json',
-    						'Content-Type': 'application/json'
-    						},
-    					data:this.JSON.stringify(model),
-    					
-    					success:function(data)
-    					{
-    						console.log("successfuly"+data);
-    						alert("done");
-    					},error:function(jqXHR,testStatus,errorThrown)
-    					{
-    						alert("error");
-    					}
-    				}
-    				);
-    document.form1.email.focus();
-    return true;
-    }
-    else
-    {
-    alert("You have entered an invalid email address!");
-    document.form1.email.focus();
-    return false;
-    }
-    }
-    </script>
-  </body>
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="http://mysqljs.com/mysql.js"></script>
+	<script>
+	function login(){
+		var password= $("#password").val();
+		var email = $("#email").val();
+		console.log(email);
+			 $.ajax({
+					url: "/admin/"+email+"/"+password,
+					method:'get',
+					dataType:'json',
+					success:function(data){
+						alert("good");
+						window.location.assign('/web/index2.html');
+				},error: function(jqXHR,testStatus,errorThrown){
+					alert("Wrong email or password");
+				}
+			 });
+	}
+</script>
+</body>
 </html>

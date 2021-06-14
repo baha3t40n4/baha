@@ -32,4 +32,8 @@ public class userService {
 	{
 		return dao.save(u);
 	}
+	public user login(String email, String password)
+	{
+		return dao.login(email, password);
+	}
 }

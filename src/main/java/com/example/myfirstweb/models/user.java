@@ -37,15 +37,17 @@ public class user implements Serializable{
 	
 	public user() {}
 	
-	public user(String email, String password, String firstname, String lastname, String phone) {
-		
+	public user(int id, String email, String password, String phone, String firstname,
+			String lastname) {
+		super();
+		this.id = id;
 		this.email = email;
 		this.password = password;
 		this.phone = phone;
 		this.firstname = firstname;
 		this.lastname = lastname;
 	}
-	
+
 	
 
 	@Override
