@@ -53,7 +53,7 @@
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter phone">
-						<input class="input100" type="tel" name="phone" placeholder="Phone" id="phone" required>
+						<input class="input100" type="tel" name="phone" placeholder="Phone" id="phone" pattern="[0-9]{10}" maxlength="10" required>
 						
 					</div>
 
@@ -68,7 +68,7 @@
 					</div>
 
                     <div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="pass" placeholder="Confirm password" id="Confirm_password"  required>
+						<input class="input100" type="password" name="conpass" placeholder="Confirm password" id="Confirm_password"  required>
 						
 					</div>
 
@@ -120,8 +120,9 @@
 
     <script>
 	function postApi(val){
-		if($("#password").val() == $("#Confirm_password").val())
-	var model = {
+		if($("#password").val() == $("#Confirm_password").val() && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test($("#email").val()))
+	{
+			var model = {
 	"firstname": this.$("#fname").val(),
 	"lastname": this.$("#lname").val(),
 	"email" : this.$("#email").val(),
@@ -153,7 +154,8 @@
 				alert("email already exists");
 			}
 		}
-		);
+		);}
+		else {			alert("invalid email or password didn't match");}
 	}
 	</script>
 </body>
